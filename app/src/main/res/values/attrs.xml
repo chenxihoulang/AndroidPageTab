@@ -1,0 +1,17 @@
+<resources>
+    <declare-styleable name="PageTabView">
+        <attr name="ptvCornerRadius" format="dimension"/>
+        <attr name="ptvBorderWidth" format="dimension"/>
+        <attr name="ptvTabHeight" format="dimension"/>
+        <attr name="ptvDividerWidth" format="dimension"/>
+        <attr name="ptvDividerMargin" format="dimension"/>
+        <attr name="ptvTextSize" format="dimension"/>
+        <attr name="ptvBgColor" format="reference|color"/>
+        <attr name="ptvBorderColor" format="reference|color"/>
+        <attr name="ptvDividerColor" format="reference|color"/>
+        <attr name="ptvSelectedTextColor" format="reference|color"/>
+        <attr name="ptvDefaultTextColor" format="reference|color"/>
+        <attr name="ptvTabItems" format="reference"/>
+        <attr name="ptvSelectItemIndex" format="integer"/>
+    </declare-styleable>
+</resources>

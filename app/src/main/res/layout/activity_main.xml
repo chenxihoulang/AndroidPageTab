@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+    <com.example.chaihongwei.androidpagetab.PageTabView
+        android:id="@+id/pageTabView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:ptvTabItems="@array/TaskStatus"/>
+
+    <com.example.chaihongwei.androidpagetab.PageTabView
+        android:id="@+id/pageTabView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FF00aa11"
+        app:ptvBgColor="#ff11ff00"
+        app:ptvBorderWidth="4dp"
+        app:ptvCornerRadius="8dp"
+        app:ptvDefaultTextColor="@color/colorAccent"
+        app:ptvDividerColor="@color/colorPrimaryDark"
+        app:ptvDividerMargin="5dp"
+        app:ptvDividerWidth="1dp"
+        app:ptvSelectItemIndex="1"
+        app:ptvSelectedTextColor="@color/colorAccent"
+        app:ptvTabHeight="48dp"
+        app:ptvTextSize="22sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="测试占位"/>
+
+
+</LinearLayout>
