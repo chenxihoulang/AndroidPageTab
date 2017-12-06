@@ -30,6 +30,7 @@
         app:ptvSelectItemIndex="1"
         app:ptvSelectedTextColor="@color/colorAccent"
         app:ptvTabHeight="48dp"
+        app:ptvTabChangedCallback="false"
         app:ptvTextSize="22sp"/>
 
     <TextView

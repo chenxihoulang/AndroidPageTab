@@ -13,5 +13,6 @@
         <attr name="ptvDefaultTextColor" format="reference|color"/>
         <attr name="ptvTabItems" format="reference"/>
         <attr name="ptvSelectItemIndex" format="integer"/>
+        <attr name="ptvTabChangedCallback" format="boolean"/>
     </declare-styleable>
 </resources>

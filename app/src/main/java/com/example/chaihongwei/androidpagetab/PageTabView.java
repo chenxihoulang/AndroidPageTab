@@ -69,6 +69,10 @@ public class PageTabView extends View {
      * 默认文本颜色
      */
     private int mDefaultTextColor = Color.BLACK;
+    /**
+     * 选择的tab有改变才进行回调,默认为true,否则每次点击都进行回调
+     */
+    private boolean mTabChangedCallback = true;
 
     private Paint mPaint;
 
@@ -110,6 +114,7 @@ public class PageTabView extends View {
         mDividerColor = a.getColor(R.styleable.PageTabView_ptvDividerColor, mDividerColor);
         mSelectedTextColor = a.getColor(R.styleable.PageTabView_ptvSelectedTextColor, mSelectedTextColor);
         mDefaultTextColor = a.getColor(R.styleable.PageTabView_ptvDefaultTextColor, mDefaultTextColor);
+        mTabChangedCallback = a.getBoolean(R.styleable.PageTabView_ptvTabChangedCallback, mTabChangedCallback);
 
         //解析item列表
         CharSequence[] tabItems = a.getTextArray(R.styleable.PageTabView_ptvTabItems);
@@ -270,6 +275,11 @@ public class PageTabView extends View {
 
                 invalidate();
 
+                if (mOnTabChangedListener != null) {
+                    mOnTabChangedListener.onChanged(mSelectItemIndex);
+                }
+            } else if (!mTabChangedCallback) {
+                //点击的tab没有改变,但用户要求每次点击都进行回调
                 if (mOnTabChangedListener != null) {
                     mOnTabChangedListener.onChanged(mSelectItemIndex);
                 }
